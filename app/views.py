@@ -1,13 +1,15 @@
 from flask import render_template
 from app import app
-#views function
+# views function
+
+
 @app.route('/')
 def index():
     '''
     View root page function that returns the index page and its data
     '''
-    message='I am ambitious'
-    return render_template('index.html',message=message) #Takes in the name of a template file as the first argument
+    title = 'Home - Welcome to The best Movie Review Website Online'
+    return render_template('index.html',title=title) #Takes in the name of a template file as the first argument
 
 
 @app.route('/movie/<int:movie_id>')
